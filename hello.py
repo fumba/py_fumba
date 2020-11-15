@@ -1,10 +1,6 @@
-class MyClass:
-    """A simple example class"""
-    i = 12345
+from flask import Flask
+app = Flask(__name__)
 
-    def f(self):
-        return 'hello world'
-
-
-test = MyClass()
-print(test.f())
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
